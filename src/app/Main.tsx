@@ -18,7 +18,7 @@ export const Main = () => {
     if (!isLoggedIn) {
       navigate(Path.Login);
     }
-  }, [isLoggedIn]);
+  }, [navigate, isLoggedIn]);
 
   const addTodolist = (todolistTitle: string) => {
     dispatch(addTodolistTC(todolistTitle));
