@@ -5,7 +5,6 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
 import { useAppDispatch, useAppSelector } from "../../../../app/hooks";
-import { selectTheme } from "../../../../app/app-selectors";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import s from "./Login.module.css";
 import { loginTC } from "../../model/auth-reducer";
