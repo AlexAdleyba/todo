@@ -88,7 +88,7 @@ export const removeTodolistTC = (todolistId: string) => (dispatch: AppDispatch) 
   dispatch(changeStatusAC("loading"));
   todolistsApi
     .removeTodolist(todolistId)
-    .then((res) => {
+    .then(() => {
       dispatch(removeTodolistAC(todolistId));
       dispatch(changeStatusAC("succeeded"));
     })
