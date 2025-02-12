@@ -12,7 +12,6 @@ import { loginTC } from "../../model/auth-reducer";
 import { selectIsLoggedIn } from "../../model/authSelector";
 import { useNavigate } from "react-router";
 import { useEffect } from "react";
-import {getTheme} from "../../../../common/theme/theme";
 import {Path} from "../../../../common/routing/Routing";
 import {Grid} from "@mui/material";
 
@@ -23,9 +22,7 @@ export type Inputs = {
 };
 
 export const Login = () => {
-  const themeMode = useAppSelector(selectTheme);
   const isLoggedIn = useAppSelector(selectIsLoggedIn);
-  const theme = getTheme(themeMode);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
@@ -46,7 +43,7 @@ export const Login = () => {
     if (isLoggedIn) {
       navigate(Path.Main);
     }
-  }, [isLoggedIn]);
+  }, [navigate, isLoggedIn]);
 
   return (
     <Grid
