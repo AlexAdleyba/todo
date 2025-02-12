@@ -1,10 +1,10 @@
 import { Inputs } from "../ui/Login/Login";
 import { Dispatch } from "redux";
 import { changeStatusAC } from "../../../app/app-reducer";
-import { authApi } from "../api/authApi";
 import {ResultCode} from "../../../common/enums/enums";
 import {handleAppError} from "../../../common/utils/handleAppError";
 import {handleServerNetworkError} from "../../../common/utils/handleServerNetworkError";
+import {authApi} from "../api/authAPI";
 
 type InitialStateType = typeof initialState;
 
